@@ -1,0 +1,19 @@
+--- #my fist replica controler
+
+kind: ReplicationController
+apiVersion: v1
+metadata:
+  name: fromrc
+spec:
+  replicas: 0
+  selector:
+    app: myapp
+  template:
+    metadata:
+      name: pod
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: container
+          image: coolgourav147/nginx-custom

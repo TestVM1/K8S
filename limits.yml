@@ -1,0 +1,26 @@
+--- # this is a limits for resource
+
+apiVersion: v1
+
+kind: LimitRange
+
+metadata:
+
+  name: mem-limit-range
+
+spec:
+
+  limits:
+
+  - default:
+
+      memory: 512Mi
+      cpu: 100m
+
+    defaultRequest:
+
+      memory: 50Mi
+      cpu: 50m
+
+    type: Container
+

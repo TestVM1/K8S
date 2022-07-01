@@ -1,0 +1,15 @@
+--- # my first pod
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod4
+  labels:
+    app: myapp1
+    type: fronted    
+spec:
+  containers:
+     - name: new-app
+       image: coolgourav147/nginx-custom:v1
+       resources:
+         requests:
+           memory: 50Mi

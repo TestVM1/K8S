@@ -1,0 +1,14 @@
+--- # my first pod
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: pod1
+  labels:
+       app: myapp
+       type: fronted
+spec:
+   containers:
+       - name: myapp-container
+         image: coolgourav147/nginx-custom
+
